@@ -25,7 +25,7 @@ const Header = () => {
 
     return (
         <AppBar position='static' sx={{ background: '#FFFFFF', color: '#000000', boxShadow: "none" }}>
-            <Container maxWidth="xl">
+            
                 <Toolbar>
                     <Grid  sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "100px"}}>
                     <Grid item xs={2}>
@@ -41,8 +41,8 @@ const Header = () => {
                     </Stack>
                     </Grid>
                     <Grid item xs={4}>
-                   <Button sx={{backgroundColor: "#E1B012", borderRadius: "20px", textTransform: "capitalize", color: "#FFFFFF", padding: "6px 14px", fontWeight: "600"}}>Регистрация</Button>
-                   <Button sx={{backgroundColor: "#E1B012", borderRadius: "20px", textTransform: "capitalize", color: "#FFFFFF", padding: "6px 26px", fontWeight: "600"}}> Вход</Button>
+                   <Button variant="contained" sx={{backgroundColor: "#E1B012", borderRadius: "20px", textTransform: "capitalize", color: "#FFFFFF", padding: "6px 14px", fontWeight: "600", }}>Регистрация</Button>
+                   <Button variant="contained" sx={{backgroundColor: "#E1B012", borderRadius: "20px", textTransform: "capitalize", color: "#FFFFFF", padding: "6px 26px", fontWeight: "600", }}> Вход</Button>
                    </Grid>
                    </Grid>
 
@@ -106,7 +106,7 @@ const Header = () => {
                         </Menu>
                     </Box>
                 </Toolbar>
-            </Container>
+           
         </AppBar>
     );
 };
