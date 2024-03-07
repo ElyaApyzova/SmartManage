@@ -1,6 +1,7 @@
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
-import { AppBar, Container, Toolbar, Box, Stack, IconButton, Menu, MenuItem, ListItemIcon, Link, Typography } from '@mui/material';
+import { AppBar, Container, Toolbar, Grid, Box, Stack, IconButton, Menu, MenuItem, ListItemIcon, Link, Typography, Button } from '@mui/material';
+import Logo from "../assets/logo.png"
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
 import NaturePeopleIcon from '@mui/icons-material/NaturePeople';
@@ -23,21 +24,27 @@ const Header = () => {
    
 
     return (
-        <AppBar position='static' sx={{ background: '#A0D206', color: '#000000', boxShadow: "none" }}>
+        <AppBar position='static' sx={{ background: '#FFFFFF', color: '#000000', boxShadow: "none" }}>
             <Container maxWidth="xl">
                 <Toolbar>
-                    <img src="" edge='start' alt="Logo" width='68' height='52'/>
-                    <Typography variant='h6' component='div'  sx={{ flexGrow: 1, color: '#0E0E0E' }}>Семейный сад</Typography>
-
+                    <Grid  sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "100px"}}>
+                    <Grid item xs={2}>
+                    <img src={Logo} edge='start' alt="Logo" width='99' height='64'/>
+                    </Grid>
+                    <Grid item xs={6}>
                     <Stack direction='row' spacing={4} marginRight={12} style={{ fontWeight: 400 }}  sx={{ fontSize: '18px',  display: { xs: 'none', md: 'flex' } }}>
                         <Link component={RouterLink} to="/" sx={{ textDecoration: 'none', color: '#0E0E0E',  }}>Главное</Link>
-                        <Link component={RouterLink} to="/TreeCards" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Деревья</Link>
-                        <Link component={RouterLink} to="/AboutUs" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>О нас</Link>
-                        <Link component={RouterLink} to="/Memories" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Воспоминания</Link>
-                        <Link component={RouterLink} to="/Family tree" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Семейное древо</Link>
+                        <Link component={RouterLink} to="/TreeCards" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Бюджет</Link>
+                        <Link component={RouterLink} to="/AboutUs" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Финансовые цели</Link>
+                        <Link component={RouterLink} to="/Memories" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Статистика</Link>
+                        <Link component={RouterLink} to="/Family tree" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Транзакции</Link>
                     </Stack>
-
-                    
+                    </Grid>
+                    <Grid item xs={4}>
+                   <Button sx={{backgroundColor: "#E1B012", borderRadius: "20px", textTransform: "capitalize", color: "#FFFFFF", padding: "6px 14px", fontWeight: "600"}}>Регистрация</Button>
+                   <Button sx={{backgroundColor: "#E1B012", borderRadius: "20px", textTransform: "capitalize", color: "#FFFFFF", padding: "6px 26px", fontWeight: "600"}}> Вход</Button>
+                   </Grid>
+                   </Grid>
 
                     <Box edge='end' sx={{ display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
