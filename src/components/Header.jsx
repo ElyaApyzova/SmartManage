@@ -24,25 +24,34 @@ const Header = () => {
    
 
     return (
-        <AppBar position='static' sx={{ background: '#FFFFFF', color: '#000000', boxShadow: "none" }}>
+       
+        <AppBar position='static' sx={{ background: '#FFFFFF', color: '#000000', boxShadow: "2" }}>
             
                 <Toolbar>
-                    <Grid  sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "100px"}}>
-                    <Grid item xs={2}>
+                <Container>
+                    <Grid  spacing={8}  sx={{ display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+                    <Grid>
                     <img src={Logo} edge='start' alt="Logo" width='99' height='64'/>
                     </Grid>
-                    <Grid item xs={6}>
-                    <Stack direction='row' spacing={4} marginRight={12} style={{ fontWeight: 400 }}  sx={{ fontSize: '18px',  display: { xs: 'none', md: 'flex' } }}>
+                    <Grid sx={{ display: "flex", justifyContent: "space-between", gap: "40px", fontSize: "18px", fontWeight: "500"}}>
+                    
                         <Link component={RouterLink} to="/" sx={{ textDecoration: 'none', color: '#0E0E0E',  }}>Главное</Link>
                         <Link component={RouterLink} to="/TreeCards" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Бюджет</Link>
                         <Link component={RouterLink} to="/AboutUs" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Финансовые цели</Link>
                         <Link component={RouterLink} to="/Memories" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Статистика</Link>
                         <Link component={RouterLink} to="/Family tree" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Транзакции</Link>
-                    </Stack>
+                    
                     </Grid>
-                    <Grid item xs={4}>
-                   <Button variant="contained" sx={{backgroundColor: "#E1B012", borderRadius: "20px", textTransform: "capitalize", color: "#FFFFFF", padding: "6px 14px", fontWeight: "600", }}>Регистрация</Button>
-                   <Button variant="contained" sx={{backgroundColor: "#E1B012", borderRadius: "20px", textTransform: "capitalize", color: "#FFFFFF", padding: "6px 26px", fontWeight: "600", }}> Вход</Button>
+                    <Grid spacing={6} sx={{ display: "flex", gap: "40px"}}>
+                   <Button variant="contained" sx={{backgroundColor: "#E1B012", borderRadius: "20px", textTransform: "capitalize", color: "#FFFFFF", padding: "6px 20px", fontWeight: "600",
+                "&:hover": {backgroundColor: "#008B72"} }}>
+                    Регистрация
+                   </Button>
+                   <Button variant="contained" sx={{backgroundColor: "#E1B012", borderRadius: "20px", textTransform: "capitalize", color: "#FFFFFF", padding: "6px 26px", fontWeight: "600", 
+                "&:hover": {backgroundColor: "#008B72"}}}>
+                    Вход
+                    </Button>
+                  
                    </Grid>
                    </Grid>
 
@@ -105,9 +114,11 @@ const Header = () => {
                             </MenuItem>
                         </Menu>
                     </Box>
+                    </Container>
                 </Toolbar>
            
         </AppBar>
+        
     );
 };
 
