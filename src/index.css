@@ -1,3 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+ background-image: url("./assets/bg.png");
+ background-repeat: no-repeat;
 }

@@ -25,7 +25,7 @@ const Header = () => {
 
     return (
        
-        <AppBar position='static' sx={{ background: '#FFFFFF', color: '#000000', boxShadow: "2" }}>
+        <AppBar position='static' sx={{ background: '#FFFFFF', color: '#000000', boxShadow: "none" }}>
             
                 <Toolbar>
                 <Container>
@@ -33,7 +33,7 @@ const Header = () => {
                     <Grid>
                     <img src={Logo} edge='start' alt="Logo" width='99' height='64'/>
                     </Grid>
-                    <Grid sx={{ display: "flex", justifyContent: "space-between", gap: "40px", fontSize: "18px", fontWeight: "500"}}>
+                    <Grid sx={{ display: "flex", justifyContent: "space-between", gap: "40px", fontSize: "18px", fontWeight: "600"}}>
                     
                         <Link component={RouterLink} to="/" sx={{ textDecoration: 'none', color: '#0E0E0E',  }}>Главное</Link>
                         <Link component={RouterLink} to="/TreeCards" sx={{ textDecoration: 'none', color: '#0E0E0E' }}>Бюджет</Link>
