@@ -1,5 +1,6 @@
 import React from "react";
 import MainPage from "./MainPage/MainPage";
+import CreateBill from "./CreateBill/CreateBill";
 
 
 const Home = () => {
@@ -7,6 +8,9 @@ const Home = () => {
         <div>
          <div>
         <MainPage />
+        </div>
+        <div>
+            <CreateBill />
         </div>
        </div>
     )
